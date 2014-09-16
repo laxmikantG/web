@@ -1,0 +1,889 @@
+<!DOCTYPE HTML>
+<html>
+<title>Sofycomps India</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script>
+   $(document).ready(function(){
+       $(window).bind('scroll', function() {
+       var navHeight = $( window ).height() - 60;
+             if ($(window).scrollTop() > navHeight) {
+                 $('.menu').addClass('fixed');
+             }
+             else {
+                 $('.menu').removeClass('fixed');
+             }
+        });
+	
+	$('.more-blogs > ul').find('li').click(function(){
+		$(this).toggleClass('show-blog-lists');
+	});
+    });
+</script>
+
+<style>
+
+*{margin: 0; padding: 0; 
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+body {
+	font-size: 14px;
+	background-color: rgb(220, 220, 220);
+	color: rgb(80, 80, 80);
+}
+header {
+	background-image: url('images/DeathtoStock_Wired7.jpg');
+	background-size: 100%;
+}
+.banner {
+	height: 578px;
+	overflow: hidden;
+	margin: 0 auto !important;
+	background: rgba(0, 0, 0, 0.5);
+}
+.banner .banner-label {
+	width: 80%;
+	margin: 150px auto 0 auto;
+	border: 2px solid rgb(200, 200, 200);
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	font-size: 100px;
+	line-height: 100px;
+	padding: 50px 10px;
+	}
+.banner .banner-label p.banner-title {
+	font-weight: bold;
+	}
+.banner .banner-label a {text-decoration: none; color: inherit;}
+.banner .banner-sub {
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: normal;
+	}
+.menu {
+	background-color: #262b37;
+	text-align: center;
+}
+.menu.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999999999999999;
+	}
+.menu li{
+   display: inline;
+}
+.menu li a {
+	color: #c3c8d6;
+	padding: 22px 25px;
+	line-height: 18px;
+	text-align: center;
+	display: inline-block;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+section .section-wrapper {
+	min-height: 400px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 30px;
+	overflow: auto;
+	}
+section.services {
+	background-color: #00bdbd;
+	background-color: #262626;
+	color: white;
+	}
+section.contact {
+	background-color: white;
+	}
+section.portfolio {
+	background-color: rgba(50, 50, 50, 1);
+	color: white;
+}
+.heading {
+	text-align: center;
+	padding-bottom: 50px;
+}
+.heading h2 {
+	font-size: 36px;
+	line-height: 38px;
+	padding-bottom: 0px;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin: 0px;
+	color: #ff675f;
+	}
+section.services h2, 
+section.portfolio h2 {color: white;}
+
+
+.footer {
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+}
+.footer .container {
+	display: table;
+	margin: 0 auto;
+	}
+.footer .container > div {
+	float: left;
+	margin: 0 20px 0 20px;
+	}
+.footer ul li {list-style: none;}
+.footer .footer-bottom {
+	float: none;
+	clear: both;
+}
+
+.box{
+	 height:200px;
+	 width:300px;
+	 border:0px solid grey;
+	 margin:0;
+	 display:inline-block;
+	 float: left;
+	 background-color: black;
+	 position: relative;
+	 overflow: hidden;
+}
+.box:nth-child(1) {background-color: rgb(200, 200, 200);}
+.box:nth-child(2) {background-color: rgb(80, 80, 80);}
+.box:nth-child(3) {background-color: rgb(180, 80, 255);}
+.box:nth-child(4) {background-color: rgb(200, 200, 0);}
+.box:nth-child(5) {background-color: rgb(255, 180, 100);}
+.box:nth-child(6) {background-color: rgb(100, 180, 100);}
+.box:nth-child(7) {background-color: rgb(100, 180, 200);}
+.box > img {	
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	transition: all 0.3s ease;
+}
+.box .box-label {
+	cursor: pointer;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 1);
+	opacity: 0;
+	text-align: center;
+	display: none;
+	transition: opacity 0.3s ease;
+	}
+.box .box-label h3 {
+	text-transform: uppercase;
+	font-size: 20px;
+	line-height: 25px;
+	margin-bottom: 20px;
+	}
+.box:hover .box-label {
+	display: block;
+	opacity: 0.8;
+	}
+.box:hover img {
+	transform: scale(1.1);
+	}
+.box .box-label div {
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	width: 100%;
+	text-align: center;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	transition: all 0.3s ease;
+	}
+.box:hover .box-label div {
+	margin-top: 0 !important;
+	}
+.blog-body {
+	padding-right: 300px;
+	position: relative;
+	overflow: auto;
+	}
+.blog-item {
+	width: 300px;
+	float: left;
+	background-color: white;
+	padding: 20px;
+	border: 2px solid rgb(200, 200, 200);
+	}
+.blog-item h3 {
+	font-size: 22px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	color: rgb(100, 100, 100);
+	}
+.blog-footer {
+	 padding:2px;
+	 margin-top:25px;
+	 margin-left:10px;
+	 margin-bottom:10px;
+ }
+.blog-footer .posted-by-picture {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-right: 20px;
+	}
+.blog-footer .posted-by-picture img {
+	width: 100%;
+	}
+.blog-footer > span {display: block; padding-bottom: 10px;}
+.blog-footer span.posted-name {
+	display: block;
+	font-size: 20px;
+	}
+.blog-body .more-blogs {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 620px;
+	padding: 10px;
+	background-color: white;
+	border: 2px solid rgb(200, 200, 200);
+	overflow: auto;
+	}
+.blog-body .more-blogs ul li {
+	list-style: none;
+	margin-top: 5px;
+	font-size: 18px;
+	}
+.blog-body .more-blogs ul ul {
+	margin-left: 20px;
+	display: none;
+	}
+.blog-body .more-blogs ul ul li {
+	font-size: 15px;
+}
+.more-blogs > ul {
+	
+	}
+.more-blogs > ul > li {
+	cursor: pointer;
+	border-bottom: 1px dotted gray;
+	padding: 0 0 5px 0;
+	margin-bottom: 10px;
+	}
+.more-blogs > ul > li:before {
+	content: "[+]";
+	margin-right: 4px;
+	}
+.more-blogs > ul li.show-blog-lists:before {
+	content: "[-]";
+	}
+.more-blogs .show-blog-lists ul {display: block !important;}
+.services-part{
+	 width:280px;
+	 margin-left: 10px;
+	 margin-right: 10px;
+	 display:inline-block;
+	 text-align: center;
+	 font-size: 13px;
+	 line-height: 20px;
+ }
+  .services-part h3 {
+	margin-bottom: 30px;
+	font-weight: bold;
+	font-size: 20px;
+	}
+ .circle {
+    border: 2px solid #a1a1a1;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 40px auto 40px auto;
+    overflow: hidden;
+    }
+ .circle img {width: 100%;}
+    
+.right{
+	float:right;
+}
+
+.left{
+	float:right;
+} 
+ section.about {
+	background-color: white;
+	}
+.about-body {
+	line-height: 20px;
+	}
+.about-summaryx {
+	background-color: #f3f3f3;
+	border-bottom: 5px solid #eeeeee;
+	padding: 20px 20px 20px 30px;
+}
+.about-body h3 {
+	text-align: center;
+	font-size: 22px;
+	padding: 40px;
+	color: #ff675f;
+	}
+.about-people {
+	border-left: 1px solid rgb(200, 200, 200);
+	margin-left: 180px;
+	clear: both;
+	}
+.person-picture {
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+	float: left;
+	overflow: hidden;
+	margin-left: -30px;
+	margin-left: -240px;
+ }
+  .person-picture img {
+	width: 100%;
+  }
+.person-block {
+	background-color: #f3f3f3;
+	border-bottom: 5px solid #eeeeee;
+	padding: 0px 20px 20px 30px;
+	margin-left: 30px;
+	margin-bottom: 40px;
+	min-height: 150px;
+	}
+.person-block h4 {
+	font-size: 22px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	color: rgb(70, 70, 70);
+	}
+.person-block .person-title {
+	font-size: 16px;
+	color: rgb(50,50,50);
+	padding-bottom: 10px;
+	}
+.person-block .person-summary {
+	font-size: 14px;
+	line-height: 20px;
+	color: rgb(100,100,100);
+	}
+
+.careers h2 {margin-bottom: 20px;}
+.careers h4 {margin-top: 20px; margin-bottom: 10px;}
+form p {
+	margin-bottom: 10px;
+	}
+form p label {
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+	padding-right: 20px;
+	font-weight: bold;
+	}
+form input {
+	width: 400px;
+	line-height: 18px;
+	font-size: 15px;
+	padding: 5px;
+	}
+form button {
+	padding: 5px 10px;
+	}
+.social-contacts {
+	clear: both;
+	padding: 20px 0 0 0;
+	text-align: center;
+	}
+.contact-icon {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	margin: 0 10px 0 10px;
+	}
+.contact-icon img {	
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	}
+.map_background {
+	width: 100%;
+	}
+	
+.blog{
+display:none;
+}
+</style>
+</head>
+<body>
+<header class="header">
+	<div class="banner">
+		<div class="banner-label">
+			<p class="banner-title"><a href="/home.html">Sofycomps India</a></p>
+			<p class="banner-sub">World's best company...</p>
+		</div>
+	</div>
+	<div class="menu">
+		<ul class="nav">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#about">About Us</a></li>
+			<li><a href="#careers">Careers</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</div>
+</header>
+
+
+<!-- Content block ------>
+
+<!-- Home block ------>
+<!--section class="home">
+ Home Page content goes here 
+</section-->
+<!-- End block -->
+
+<!-- Services block ------>
+<section class="services" id="services">
+	<div class="section-wrapper">
+		<div class="heading">
+			<h2>Our Services</h2>
+			<p>The services we provide</p>
+		</div>
+		 <div class="services-body">
+		 	<div class="services-part">
+		 	<div class="circle"></div>
+				<h3>Research and development</h3>
+				<p>Sofycomps India Research Software development team has great experiences in works with business analysts across the globe to ensure we retains the highest standards of excellent in developement research. We develop, ...</p>
+			</div>
+			<div class="services-part">
+			<div class="circle"></div>
+				<h3>Product Engineering</h3>
+				<p>Experiencing amazing products requires leading-edge technology skills, highly managed efficient software programs, and a concentrated perspective to achieve the goal. We have deep philosophy approach to product engineering services....</p>
+			</div>
+			<div class="services-part">
+			<div class="circle"></div>
+				<h3>Rich media services</h3>
+				<p>Our reach media products involves Multimedia, e-Learning softwares, Corporate presentations. Powerful media library provides schools, higher educational institutions and businesses with the way to share and manage their educational content...</p>
+			</div>
+			
+			<div class="services-part">
+			<div class="circle"><img src="images/ecommerce.jpg"/></div>
+				<h3>e-Commerce and CMS</h3>
+				<p>We developers delivering web development in e-Commerce and CMS services to our customers situated across the globe. We eCommerce experts maintain our heights in the ecommerce technolgy. Our easy, robust, secure APIs along with fully customised powerful...</p>
+			</div>
+			<div class="services-part">
+			<div class="circle"><img src="images/ecommerce.jpg"/></div>
+				<h3>Mobile Application Services</h3>
+				<p>Sofycomps India a leading mobile technology solution provider. We build robust, award-winning web and mobile solutions for iOS, Android, Windows 8, HTML5. Our development team is specialized in Mobile apps development for outsource by Offshore clients.</p>
+			</div>
+			<div class="services-part">
+			<div class="circle"><img src="images/ecommerce.jpg"/></div>
+				<h3>Web Graphics and design</h3>
+				<p>We are designers with strong interests and capabilities in both the design of engaging user experiences. As a UX Designer, we are working on cutting edge applications and technologies for our products. We provide flash advertisements, graphics logos, images etc </p>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- End block -->
+
+<!-- Portfolio block ------>
+<section class="portfolio" id="portfolio">
+	<div class="section-wrapper">
+		<div class="heading">
+			<h2>Our Portfolio</h2>
+			<p>Showcase our latest works</p>
+		</div>
+		 <div class="portfolio-body">
+		 	<div class="box">
+				<img src="http://www.scionsys.com/images/portfolio/thumbs/2.jpg" />
+				<div class="box-label">
+					<div>
+						<h3>Sandipani Technical Campus</h3>
+						<p>http://www.sandipani.ac.in</p>
+					</div>
+				</div>
+			</div>
+		 	<div class="box">
+				<img src="http://www.scionsys.com/images/portfolio/thumbs/3.jpg" />
+				<div class="box-label">
+					<div>
+						<h3>Vision RDC</h3>
+						<p>http://www.visionrdc.com/</p>
+					</div>
+				</div>
+			</div>
+
+		 	<div class="box">
+				<img src="http://www.scionsys.com/images/portfolio/thumbs/5.jpg" />
+				<div class="box-label">
+					<div>
+						<h3>Jaikranti College</h3>
+						<p>http://jaikranticollege.com</p>
+					</div>
+				</div>
+			</div>
+		 	<div class="box">
+				<img src="http://www.scionsys.com/images/portfolio/thumbs/6.jpg" />
+				<div class="box-label">
+					<div>
+						<h3>Venaktesh Eye Institute</h3>
+						<p>http://www.venkatesheye.com</p>
+					</div>
+				</div>
+			</div>
+		 	<div class="box">
+				<img src="http://www.scionsys.com/images/portfolio/thumbs/7.jpg" />
+				<div class="box-label">
+					<div>
+						<h3>Hello Latur</h3>
+						<p>http://www.hellolatur.com/</p>
+					</div>
+				</div>
+			</div>
+		 	<div class="box">
+				<img src="http://www.scionsys.com/images/portfolio/thumbs/8.jpg" />
+				<div class="box-label">
+					<div>
+						<h3>Dr. Sunil Ugile's Piles Clinic</h3>
+						<p>www.pilesclinicpune.com</p>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<img src="http://www.scionsys.com/images/portfolio/thumbs/9.jpg" />
+				<div class="box-label">
+					<div>
+						<h3>Jeevan Rekha Pratishthan</h3>
+						<p>http://www.jeevanrekha.in</p>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<img src="http://www.scionsys.com/images/portfolio/thumbs/10.jpg" />
+				<div class="box-label">
+					<div>
+						<h3>Shop at Abhijeet Jwellers</h3>
+						<p>shop.abhijeetjwellers.in (Under Construction)</p>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<img src="http://www.scionsys.com/images/portfolio/thumbs/11.jpg" />
+				<div class="box-label">
+					<div>
+						<h3>Abhijeet Jwellers</h3>
+						<p>www.abhijeetjwellers.in(Under Construction)</p>
+					</div>
+				</div>
+			</div>
+			
+		 </div>
+	</div>
+</section>
+<!-- End block -->
+
+<!-- blogs block ------>
+<section class="blog" id="blog">
+	<div class="section-wrapper">
+		<div class="heading">
+			<h2>Our Blogs</h2>
+			<p>Our activity news blogs</p>
+		</div>
+		<div class="blog-body">
+		 	<div class="blog-item">
+				<h3>This  my blog</h3>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book....</p>
+				<div class="blog-footer">
+					<div class="posted-by-picture"><img src="images/pp.jpg" /></div>
+					<span class="posted-date">September 10th, 2014</span>
+					<span class="posted-by">
+						Posted by: 
+						<span class="posted-name">Laxikant</span>
+					</span>
+				</div>
+			</div>
+		 	<div class="blog-item">
+				<h3>This my blog 2</h3>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...</p>
+				<div class="blog-footer">
+					<div class="posted-by-picture"><img src="images/pp.jpg" /></div>
+					<span class="posted-date">September 10th, 2014</span>
+					<span class="posted-by">
+						Posted by: 
+						<span class="posted-name">Laxikant</span>
+					</span>
+				</div>
+			</div>
+			<div class="blog-item">
+				<h3>This s my blog 3</h3>
+				<p style="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...</p>
+				<div class="blog-footer">
+					<div class="blog-footer">
+						<div class="posted-by-picture"><img src="images/pp.jpg" /></div>
+						<span class="posted-date">September 10th, 2014</span>
+						<span class="posted-by">
+							Posted by: 
+							<span class="posted-name">Laxikant</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="blog-item">
+				<h3>This s my blog 4</h3>
+				<p style="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...</p>
+				<div class="blog-footer">
+					<div class="blog-footer">
+						<div class="posted-by-picture"><img src="images/pp.jpg" /></div>
+						<span class="posted-date">September 10th, 2014</span>
+						<span class="posted-by">
+							Posted by: 
+							<span class="posted-name">Laxikant</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="more-blogs">
+				<ul>
+					<li>September 2014
+						<ul>
+							<li><a href="#">Sep 30 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Sep 29 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Sep 28 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Sep 27 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Sep 26 - Blog title sometime it could be quite long</a></li>
+						</ul>
+					</li>
+					<li>August 2014
+						<ul>
+							<li><a href="#">Aug 30 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 29 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 28 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 27 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 26 - Blog title sometime it could be quite long</a></li>
+							
+							<li><a href="#">Aug 30 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 29 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 28 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 27 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 26 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 30 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 29 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 28 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 27 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 26 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 30 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 29 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 28 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 27 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 26 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 30 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 29 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 28 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 27 - Blog title sometime it could be quite long</a></li>
+							<li><a href="#">Aug 26 - Blog title sometime it could be quite long</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- End block -->
+
+
+<!-- About us block ------>
+<section class="about" id="about">
+	<div class="section-wrapper">
+		<div class="heading">
+			<h2>About US</h2>
+			<p>What we do...</p>
+		</div>
+		<div class="about-body">
+			<div class="about-summary">
+				<p>At Sofycomps India, our dedicated team consistently delivers superior quality products and services. Our team consists of designers, developers, coders. From the top-level seasoned professionals to the recent graduates employed here contribute to the growth of the company with their experience and innovative ideas.</p>
+			</div>
+			<h3>The people</h3>
+			<div class="about-people">
+				<div class="person-block">
+					<div class="person-picture">
+						<img src="images/pp.jpg" />
+					</div>
+					<h4>Laxmikant Gurnalkar</h4>
+					<p class="person-title">CEO</p>
+					<p class="person-summary">XYZ</p>
+				</div>
+				<div class="person-block">
+					<div class="person-picture">
+						<img src="images/pp.jpg" />
+					</div>
+					<h4>Swati Gurnalkar</h4>
+					<p class="person-title">CFO</p>
+					<p class="person-summary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				</div>
+				<div class="person-block">
+					<div class="person-picture">
+						<img src="images/pp.jpg" />
+					</div>
+					<h4>Sandip Sulakhe</h4>
+					<p class="person-title">COO</p>
+					<p class="person-summary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End block -->
+
+<!-- Careers block ------>
+<section class="careers" id="careers">
+	<div class="section-wrapper">
+		<div class="heading">
+			<h2>Careers with us</h2>
+			<p>Our activity news Careers</p>
+		</div>	
+<h2>Why Join Us?</h2>
+
+<p>If you are fiercely passionate about development with innovative technologies and build the most futuristic technology to create the next e-genreation for our customers. 
+Most of our day is spent inventing, sharing, shooting, editing, gazing at amazing technology, coding our brains out, crazy timeouts, playing pranks on each other and joining 
+together to create something outstanding; we all believe in and are psyched about on a daily basis. So if you like doing all this stuff, Sofycomps India is the place for you.</p>
+<form>
+<h4>Submit Profile </h4>
+<p><label>Name :</label><input type="text" name="username" id="username"></p>
+<p><label>Email ID: </label><input type="email" name="email" id="email"></p>
+<p><label>Contact no:</label><input type="text" name="contactno" id="contactno"></p>
+<p><label>Resume:</label> <input type="file" name="resume" id="resume"></p>
+<p><label></label><button name="submit">Submit</button></p>
+</form> 
+
+<h4>Why You'll Love It Here? </h4>
+
+<p>A work environment that's so much fun and casual we hesitate to call it "job"
+Ample paid time off so you can finally take that vacation you deserve
+All the usual yearly holidays, plus a few you might not expect
+A practical, transparent policy framework
+Flexible work arrangements to accommodate your ever-busy life
+Enough free snacks and drinks
+An annual company outing and parties that people actually want to attend</p>
+
+
+
+
+	</div>
+</section>
+<!-- End block -->
+
+<!-- Contact us block ------>
+<section class="contact" id="contact">
+	<div class="section-wrapper">
+		<div class="heading">
+			<h2>Contact US</h2>
+			<p>Keep in touch with us</p>
+		</div>
+		<div class="blog-body">
+		<div class="map_background box" style="height:120px;">
+					<h6>We are here</h6>
+				  <div class="map">
+					<iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.co.in/maps/place/15,+Vakil+Nagar,+Erandwane,+Pune,+Maharashtra+411052/@18.4994349,73.8323133,17z/data=!4m23!1m20!4m19!1m6!1m2!1s0x3bc2bff340000001:0x89785750a9af6cf7!2sDeenanath+Mangeshkar+Hospital,+B-101,+10a,+Parmar+Trade+Centre,+Connaught+Road,+Sadhu+Vaswani+Chowk,+Sadhu+Vaswani+Chowk,+Pune,+Maharashtra+411001!2m2!1d73.832232!2d18.502109!1m6!1m2!1s0x3bc2bfed915a45ed:0xdb6178bdd89c9168!2sPatwardhan+Baug,+Patwardhan+Baug,+Erandwane+Pune+411004,+Erandwane,+Pune,+Maharashtra+411004!2m2!1d73.813811!2d18.498306!1m3!2m2!1d73.8322545!2d18.4989548!3e0!3m1!1s0x3bc2bff2258390b5:0x15344b52ed41b22"></iframe>
+				  </div>
+		    </div>
+		    <div class="social-contacts">
+		 	<div class="contact-icon email">
+				<a href="mailto:laxmikant.gurnalkar@gmail.com"><img src="icons/email.png" /></a>
+			</div>
+
+			<div class="contact-icon phone">
+				<a><img src="icons/rss.png" /></a>
+			</div>
+			<div class="contact-icon gplus">
+				<img src="icons/googleplus.png" />
+			</div>
+			
+			<div class="contact-icon tweeter">
+				<img src="icons/twitter.png" />
+			</div>
+			<div class="contact-icon linkedin">
+				<img src="icons/linkedin.png" />
+			</div>
+			<div class="contact-icon facebook">
+				<img src="icons/facebook.png" />
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End block -->
+
+<!-- End Content block -->
+
+<!-- Block for modals dialogs ------>
+
+<!-- End  modals Block ------>
+	<!----/start-footer---->
+    <div class="footer">
+		<div class="container">
+			<div class="footer-grid">
+				<h3>Explore</h3>
+			    <ul class="list1">
+					  <li><a href="#">Home</a></li>
+					  <li><a href="#">About us</a></li>
+					  <li><a href="#">Services</a></li>
+					  <li><a href="#">Portfolio</a></li>
+					  <li><a href="#">Blogs</a></li>
+					  <li><a href="#">Contact</a></li>
+			    </ul>
+			</div>
+			<div class="footer-grid">
+				<h3>Browse</h3>
+				<ul class="list1">
+					  <li><a href="#">Careers</a></li>
+					  <li><a href="#">News and Events</a></li>
+					  <li><a href="#">Contact Us</a></li>
+					  <li><a href="#">Terms of Services</a></li>
+					  <li><a href="#">Privacy Policy</a></li>
+				</ul>
+			  </div>
+			  <div class="footer-grid">
+				  <h3>Contact Us</h3>
+				  <p> 2321 Street name,<br> City name,Country</p>
+				  <p class="f_text">Fax:00-250-2131</p>
+			      <p>Phone:00-250-2258</p>
+			 </div>
+			 <div class="footer-grid footer-grid_last">
+				<h3>contact  with  us</h3>
+				 <ul class="social">	
+				 	 <li><a href="#"><span class="fb-icon"> </span></a></li>
+				 	  <li><a href="#"> <span class="Db-icon"> </span></a></li>	
+				 	  <li><a href="#">  <span class="pin-icon"> </span></a></li><br>
+				 	  <li><a href="#"><span class="in-icon"> </span></a></li>
+				 	  <li><a href="#"><span class="sky-icon"> </span></a></li>	
+				 	  <li><a href="#"><span class="share-icon"> </span></a></li>
+			     </ul>
+		     </div>
+			 <div class="clearfix"> </div>
+			<div class="footer-bottom">
+     	  	<div class="copy">
+			   <p>&copy; 2014 </p>
+		    </div>
+		    <div class="footer-logo">
+		       <a href="home.html"><img src="images/logo.png" alt=""/></a>
+		    </div>
+		    <div class="clearfix"> </div>
+		  </div>
+		</div>
+	</div>	
+</body>
+</html>
