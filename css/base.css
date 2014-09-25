@@ -109,7 +109,7 @@ a:hover {
     padding:48px 0;
 }
 header {
-	background-image: url('images/DeathtoStock_Wired7.jpg');
+	background-image: url('../img/a.jpg');
 	background-size: 100%;
 }
 
@@ -375,34 +375,22 @@ section.portfolio h2 {color: white;}
 
 .person-picture {
 	width: 150px;
-	height: 150px;
 	border-radius: 100px;
 	float: left;
 	overflow: hidden;
-	margin-left: -30px;
 	margin-left: -240px;
  }
-  .person-picture img {
-	width: 100%;
-  }
 .person-block {
-	background-color: #f3f3f3;
 	border-bottom: 5px solid #eeeeee;
-	padding: 0px 20px 20px 30px;
 	margin-left: 30px;
-	margin-bottom: 40px;
-	min-height: 150px;
 	}
 .person-block h4 {
 	font-size: 22px;
-	padding-top: 20px;
-	padding-bottom: 10px;
 	color: rgb(70, 70, 70);
 	}
 .person-block .person-title {
 	font-size: 16px;
 	color: rgb(50,50,50);
-	padding-bottom: 10px;
 	}
 .person-block .person-summary {
 	font-size: 14px;
