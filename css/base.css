@@ -13,7 +13,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Quattrocento', serif;
 
 }
 body {
@@ -119,8 +119,10 @@ h1 {
     margin-bottom:12px;
 }
 
-p {
+p:not(.banner-title):not(.banner-sub){
     margin-bottom:18px;
+    line-height:180%;
+    color:black;
 }
 
 
