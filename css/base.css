@@ -106,11 +106,12 @@ a:hover {
 .container {
     width:auto;
     margin:0 auto;
-    padding:48px 0;
+    padding:27px 0;
 }
 header {
 	background-image: url('../images/a.jpg');
 	background-size: 100%;
+	background-repeat:no-repeat;
 }
 
 
@@ -248,7 +249,7 @@ section.portfolio h2 {color: white;}
 .portfolio-body .box{
 	 height:200px;
 	 width:300px;
-	 border:0px solid grey;
+	 border:0px solid gray;
 	 margin:0;
 	 display:inline-block;
 	 float: left;
